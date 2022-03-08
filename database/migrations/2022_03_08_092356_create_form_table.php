@@ -34,17 +34,25 @@ class CreateFormTable extends Migration
             $table->foreign('id_wilayah')->references('id_wilayah')->on('tb_wilayah');
         });
 
+        Schema::create('tb_kategori', function (Blueprint $table) {
+            $table->id('id_kategori');
+            $table->string('nama_kategori');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+        });
+
         Schema::create('tb_produk', function (Blueprint $table) {
             $table->id('id_produk');
             $table->unsignedBigInteger('id_restoran');
+            $table->unsignedBigInteger('id_kategori');
             $table->string('nama_produk');
             $table->string('harga_produk');
-            $table->string('jenis_produk');
             $table->string('rate_produk');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
 
             $table->foreign('id_restoran')->references('id_restoran')->on('tb_restoran');
+            $table->foreign('id_kategori')->references('id_kategori')->on('tb_kategori');
         });
     }
 
