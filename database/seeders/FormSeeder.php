@@ -45,6 +45,20 @@ class FormSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 
+        DB::table('tb_wilayah')->insert([
+            'nama_wilayah' => 'Bekasi Dummy',
+            'kecamatan' => 'Dummy',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('tb_wilayah')->insert([
+            'nama_wilayah' => 'Bekasi Dummy 2',
+            'kecamatan' => 'Dummy 2',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
         //tabel restoran
         DB::table('tb_restoran')->insert([
             'id_wilayah' => '1',
@@ -86,6 +100,26 @@ class FormSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 
+        DB::table('tb_restoran')->insert([
+            'id_wilayah' => '5',
+            'nama_restoran' => 'Restoran 5',
+            'nomor_restoran' => '081234567891',
+            'alamat' => 'Jl. Bekasi 4',
+            'rate_restoran' => '4',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('tb_restoran')->insert([
+            'id_wilayah' => '6',
+            'nama_restoran' => 'Restoran 6',
+            'nomor_restoran' => '081234567891',
+            'alamat' => 'Jl. Bekasi 5',
+            'rate_restoran' => '4',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
         //tabel kategori
         DB::table('tb_kategori')->insert([
             'nama_kategori' => 'Makanan',
@@ -107,6 +141,18 @@ class FormSeeder extends Seeder
 
         DB::table('tb_kategori')->insert([
             'nama_kategori' => 'Fashion',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('tb_kategori')->insert([
+            'nama_kategori' => 'Dummy 1',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('tb_kategori')->insert([
+            'nama_kategori' => 'Dummy 2',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);

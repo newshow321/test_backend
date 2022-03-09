@@ -14,7 +14,7 @@ class WilayahController extends Controller
         if (isset($id)) {
             $Wilayah = Wilayah::findOrFail($id);
             return response()->json(['msg' => 'Data retrieved', 'data' => $Wilayah], 200);
-        } else {
+        } else  {
             $Wilayahs = Wilayah::get();
             return response()->json(['msg' => 'Data retrieved', 'data' => $Wilayahs], 200);
         }
